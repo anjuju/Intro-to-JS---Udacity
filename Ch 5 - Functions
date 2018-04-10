@@ -1,0 +1,65 @@
+// Build Triangle
+
+/* create a function called buildTriangle() that will accept an input 
+(the triangle at its widest width) and will return the string representation of a triangle. */
+
+function makeLine(length) {
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
+    }
+    return line + "\n";
+}
+
+function buildTriangle(height) {
+  for (var i = 1; i <= height; i++) {
+    console.log(makeLine(i));
+  }
+}
+
+
+// Anonymous functions
+
+/*Write an anonymous function expression that stores a function 
+in a variable called "laugh" and outputs the number of "ha"s that you pass in as an argument. */
+
+var laugh = function(num) {
+  var ha = "";
+  for (var i = 0; i < num; i++) {
+    ha += "ha";
+  }
+  return ha
+}
+
+// Named functions
+
+/*Write a named function expression that stores the function in a variable called cry and returns "boohoo!".
+Don't forget to call the function using the variable name, not the function name:*/
+
+var cry = function boohoo() {
+  return "boohoo!";
+}
+
+console.log(cry());
+
+// Inline functions
+
+/*Call the emotions() function so that it prints the output you see below,
+but instead of passing the laugh() function as an argument, pass an inline function expression instead.
+emotions("happy", laugh(2));
+*/
+
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+
+emotions("happy", function laugh(num) {
+  var ha = "";
+  for (i=0; i<num; i++) {
+    ha += "ha";
+  }
+  return ha;});
+
+
+
+
